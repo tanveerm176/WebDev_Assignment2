@@ -14,3 +14,19 @@ function myEach(arr, callback) {
 
 // const array1 = ['a', 'b', 'c'];
 // myEach(array1,console.log);
+
+function myMap(arr, callback) {
+    newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArray.push(callback(arr[i]))
+    }
+    return newArray;
+}
+
+// function mul(x)
+// {
+//     return x*2
+// }
+// const array1 = [1, 4, 9, 16];
+// const map1 = myMap(array1, mul);
+// console.log(map1);
