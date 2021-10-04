@@ -130,6 +130,7 @@ function myIncludes(arr, searchElement, fromIndex = 0) {
     if(fromIndex<0 && (Math.abs(fromIndex))>arr.length)
     {
         fromIndex = 0;
+        
     }
     else
     {
@@ -147,3 +148,54 @@ function myIncludes(arr, searchElement, fromIndex = 0) {
 // const array1 = [1, 2, 3,4];
 // console.log(myIncludes(array1,4,-1))
 
+function myIndexOf(arr, searchElement, fromIndex = 0) 
+{
+    if(fromIndex>= arr.length)
+    {
+        return -1;
+    }
+    if(fromIndex<0)
+    {
+        fromIndex = arr.length + fromIndex
+    }
+
+    counter = 0;
+    for (let i = fromIndex; i < arr.length; i++) {
+        if (arr[i] === searchElement) {
+            counter = i;
+            return counter;
+        }
+    }
+    return counter = -1;
+}
+
+// const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+// console.log(myIndexOf(beasts, 'bison', 6))
+
+function myPush(arr, element) {
+    newArrSize = arr.length + 1;
+    let newArr = new Array(newArrSize);
+    newArr[newArrSize - 1] = element;
+
+    return newArr.length;
+}
+
+// const animals = ['pigs', 'goats', 'sheep'];
+// const count = animals.push('cows');
+// console.log(count);
+// console.log(animals);
+
+function myLastIndexOf(arr, searchElement, fromIndex = 0) 
+{
+    counter = -1;
+    for (i = fromIndex; i < arr.length; i++) {
+        if (arr[i] === searchElement) {
+            counter=i;
+        }
+    }
+    return counter
+
+}
+
+// const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+// console.log(myLastIndexOf(animals, 'Dodo'));
