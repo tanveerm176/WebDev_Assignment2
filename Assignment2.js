@@ -199,3 +199,32 @@ function myLastIndexOf(arr, searchElement, fromIndex = 0)
 
 // const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 // console.log(myLastIndexOf(animals, 'Dodo'));
+
+
+function grabKeys(object) 
+{
+    newArr = [];
+    for (var key in object) 
+    {
+        newArr.push(key);
+    }
+    return newArr;
+} 
+
+function grabValues(object)
+{
+    newArr = [];
+    for (var key in object)
+    {
+        newArr.push(object[key]);
+    }
+    return newArr;
+}
+
+// const object1 =
+// {
+//     a: 'somestring',    
+//     b: 42,
+//     c: false
+// };
+// console.log(grabValues(object1));
