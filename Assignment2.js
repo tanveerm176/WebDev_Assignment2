@@ -53,3 +53,13 @@ function myFilter(arr, callback) {
 // }
 // const result = myFilter(words, check);
 // console.log(result);
+
+function mySome(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i])) {
+            return true;
+        }
+
+    }
+    return false;
+}
