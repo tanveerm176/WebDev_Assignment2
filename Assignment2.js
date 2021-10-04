@@ -30,3 +30,26 @@ function myMap(arr, callback) {
 // const array1 = [1, 4, 9, 16];
 // const map1 = myMap(array1, mul);
 // console.log(map1);
+
+function myFilter(arr, callback) {
+    newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i]) == true) {
+            newArr.push(arr[i])
+        }
+
+    }
+    return newArr;
+}
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// function check(word) {
+//     if (word.length > 6) {
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// }
+// const result = myFilter(words, check);
+// console.log(result);
